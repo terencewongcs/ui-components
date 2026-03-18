@@ -23,7 +23,7 @@ const meta: Meta<typeof Button> = {
     },
     size: {
       control: 'select',
-      options: ['sm', 'md', 'lg'],
+      options: ['sm', 'md', 'lg', 'xl'],
       description: 'Size of the button',
     },
     disabled: {
@@ -66,6 +66,10 @@ export const Large: Story = {
   args: { variant: 'primary', size: 'lg', children: 'Large' },
 };
 
+export const ExtraLarge: Story = {
+  args: { variant: 'primary', size: 'xl', children: 'Extra Large' },
+};
+
 export const Disabled: Story = {
   args: { variant: 'primary', disabled: true, children: 'Disabled' },
 };
@@ -88,6 +92,7 @@ export const AllVariants: Story = {
           <Button size="sm">Small</Button>
           <Button size="md">Medium</Button>
           <Button size="lg">Large</Button>
+          <Button size="xl">Extra Large</Button>
         </div>
       </div>
       <div>

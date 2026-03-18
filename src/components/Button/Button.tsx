@@ -7,7 +7,7 @@ import {
 } from './Button.styles';
 
 export type ButtonVariant = 'primary' | 'secondary' | 'outlined' | 'ghost';
-export type ButtonSize = 'sm' | 'md' | 'lg';
+export type ButtonSize = 'sm' | 'md' | 'lg' | 'xl';
 
 // Map our semantic variants to MUI's internal variants for ripple/accessibility logic
 const MUI_VARIANT_MAP: Record<ButtonVariant, MuiButtonProps['variant']> = {
@@ -32,7 +32,7 @@ export interface ButtonProps
  * Button component wrapping MUI Button with Tailwind CSS styling.
  *
  * Variants: primary | secondary | outlined | ghost
- * Sizes: sm | md | lg
+ * Sizes: sm | md | lg | xl
  *
  * Style layer (Button.styles.ts) can be swapped independently of this logic layer.
  */

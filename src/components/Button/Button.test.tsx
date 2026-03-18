@@ -40,6 +40,11 @@ describe('Button', () => {
     expect(screen.getByRole('button').className).toContain('h-12');
   });
 
+  it('applies xl size classes', () => {
+    render(<Button size="xl">Extra Large</Button>);
+    expect(screen.getByRole('button').className).toContain('h-14');
+  });
+
   it('is disabled when disabled prop is true', () => {
     render(<Button disabled>Disabled</Button>);
     expect(screen.getByRole('button')).toBeDisabled();
